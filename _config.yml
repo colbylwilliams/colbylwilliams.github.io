@@ -5,7 +5,8 @@ author: Colby Williams
 author_link: "https://github.com/colbylwilliams"
 
 description: Thoughts on life and code.
-disclaimer:  Opinions are mine.
+disclaimer_employer: I work at Microsoft,
+disclaimer_opinions: but opinions are mine.
 copyright:   © Copyright 2016 Colby L Williams
 
 baseurl: "" # the subpath of your site, e.g. /blog
