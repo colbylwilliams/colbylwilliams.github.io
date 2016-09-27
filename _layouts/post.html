@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      {% if page.author %}
+        Written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">
+          {%if page.author_link %}<a href="{{ page.author_link }}">{{ page.author }}</a>{% else %}{{ page.author }}{% endif %}
+        </span></span> —
+      {% else %}
+        Written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">
+          {%if site.author_link %}<a href="{{ site.author_link }}">{{ site.author }}</a>{% else %}{{ site.author }}{% endif %}
+        </span></span> —
+      {% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
+
+
+<div class="next-post">
+
+  {% if page.previous %}{% if page.next %}
+  <div class="post-col-wrapper">
+    <div class="post-col">
+  {% endif %}{% endif %}
+
+    {% if page.previous %}
+        <div class="post-header">
+          <p class="post-label">Previous Post</p>
+          <h2 class="post-title"><a href="{{ page.previous.url | prepend: site.baseurl }}">{{ page.previous.title | escape }}</a></h2>
+        </div>
+        <p class="post-content">{{ page.previous.excerpt }}</p>
+    {% endif %}
+
+  {% if page.previous %}{% if page.next %}
+    </div>
+    <div class="post-col">
+  {% endif %}{% endif %}
+
+    {% if page.next %}
+        <div class="post-header">
+          <p class="post-label">Next Post</p>
+          <h2 class="post-title"><a href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title | escape }}</a></h2>
+        </div>
+        <p class="post-content">{{ page.next.excerpt }}</p>
+    {% endif %}
+
+  {% if page.previous %}{% if page.next %}
+    </div>
+  </div >
+  {% endif %}{% endif %}
+
+</div>
