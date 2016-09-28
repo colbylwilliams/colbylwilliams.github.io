@@ -1,8 +1,7 @@
 ---
-layout: post
-title:  "Xamarin vs. Native"
-date:   2016-09-27 00:00:00 -0400
-tags: xamarin ios android
+layout:  post
+title:   "Xamarin vs. Native"
+tags:    xamarin ios android
 excerpt: I spend a lot of my time talking to people about mobile development.  Many of these conversations are about Xamarin, and how it compares to "native", so I figured I’d take the time to break down Xamarin.  I’ll also spend a little time on alternative approaches to mobile development — just to add some context.
 ---
 

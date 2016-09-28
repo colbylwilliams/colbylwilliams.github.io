@@ -1,8 +1,7 @@
 ---
-layout: post
-title:  "Default Desinger"
-date:   2016-09-26 18:00:00 -0400
-tags: xamarin xamarin-studio
+layout:  post
+title:   "Default Desinger"
+tags:    xamarin xamarin-studio
 excerpt: I prefer to work with <code>.xibs</code> and <code>.storyboards</code> in Xcode Interface Builder opposed to Xamarin Studio’s built-in designer.  Default Designer is a Xamarin Studio add-in to open these files with Xcode Interface Builder by default.
 ---
 
