@@ -5,9 +5,6 @@ tags: 	xamarin ios tips storyboard xcode C#
 excerpt: A while back I got in the habit of using the names my of custom types as different identifiers in iOS and macOS storyboards. This post looks at a couple examples of how this simple practice removes the need for unnecessary strings and leads to cleaner code.
 ---
 
-##### _**Updated** on September 30, 2016 to use `nameof` operator added in C# 6 instead of `typeof`.  Thanks to [@glenntstephens][1] for the great suggestion!_
-
-
 A while back I got in the habit of using the names my of custom types as different identifiers in iOS and macOS storyboards.
 
 This post looks at a couple examples of how this simple practice removes the need for unnecessary strings and leads to cleaner code.
@@ -33,11 +30,11 @@ var controller = Storyboard.InstantiateViewController (storyboardId) as CustomTa
 Everything works as expected, as long as I have a view controller in my storyboard with a matching Storyboard ID, and there isn't a typo in the string.
 
 
-However, if I _know_ that the Storyboard ID is the same as the type's name, I can use the `nameof` operator and get rid of the string altogether:
+However, if I _know_ that the Storyboard ID is the same as the type's name, I can use the `typeof` operator and get rid of the string altogether:
 
 
 {% highlight c# %}
-var storyboardId = nameof(CustomTableViewController);
+var storyboardId = typeof(CustomTableViewController).Name;
 var controller = Storyboard.InstantiateViewController (storyboardId) as CustomTableViewController;
 {% endhighlight %}
 
@@ -48,7 +45,7 @@ Or even better, write an extension method like this:
 {% highlight c# %}
 public static T Instantiate<T> (this UIStoryboard storyboard)
 	where T : UIViewController
-=> storyboard.InstantiateViewController (nameof (T)) as T;
+=> storyboard.InstantiateViewController (typeof (T).Name) as T;
 {% endhighlight %}
 
 
@@ -111,7 +108,7 @@ However again, if I _know_ that the Reuse ID is the same as the cell type's name
 {% highlight c# %}
 public static T Dequeue<T> (this UITableView tableView, NSIndexPath indexPath)
 	where T : UITableViewCell
-=> tableView.DequeueReusableCell (nameof (T), indexPath) as T;
+=> tableView.DequeueReusableCell (typeof (T).Name, indexPath) as T;
 {% endhighlight %}
 
 
@@ -136,4 +133,3 @@ You can find a the extension methods mention above and several more including su
 
 
 [0]:https://github.com/colbylwilliams/NomadCode/blob/master/NomadCode/NomadCode.iOS/Extensions/StoryboardExtensions.cs
-[1]:https://twitter.com/glenntstephens

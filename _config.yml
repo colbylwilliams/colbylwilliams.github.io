@@ -7,7 +7,7 @@ author_link: "https://github.com/colbylwilliams"
 description: Thoughts on life and code.
 disclaimer_employer: I work at Microsoft,
 disclaimer_opinions: but opinions are mine.
-copyright:   © Copyright 2016 Colby L Williams
+copyright:   © Copyright 2017 Colby L Williams
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://colbylwilliams.github.io" # the base hostname & protocol for your site
