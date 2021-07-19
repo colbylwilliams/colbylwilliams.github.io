@@ -4,20 +4,21 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-          <p>{{ site.disclaimer_employer | escape }} <span class="avoidwrap">{{ site.disclaimer_opinions | escape }}</span></p>
+        <p>{{ site.disclaimer_employer | escape }} <span class="avoidwrap">{{ site.disclaimer_opinions | escape }}</span></p>
       </div>
 
       <div class="footer-col footer-col-2">
-          {% if site.twitter_username %}
-          <p>{% include icon-github.html username=site.github_username %}</p>
-          {% endif %}
+        {% if site.twitter_username %}
+        <p>{% include icon-twitter.html username=site.twitter_username %}</p>
+        {% endif %}
       </div>
 
       <div class="footer-col footer-col-3">
-          {% if site.github_username %}
-          <p>{% include icon-twitter.html username=site.twitter_username %}</p>
-          {% endif %}
+        {% if site.github_username %}
+        <p>{% include icon-github.html username=site.github_username %}</p>
+        {% endif %}
       </div>
+
     </div>
 
     <div class="footer-copyright">

@@ -1,21 +1,21 @@
 # Colby L Williams
 #
-title:  Colby L Williams
+title: Colby L Williams
 author: Colby Williams
-author_link: "https://github.com/colbylwilliams"
+author_link: 'https://github.com/colbylwilliams'
 
 description: Thoughts on life and code.
 disclaimer_employer: I work at Microsoft,
 disclaimer_opinions: but opinions are mine.
-copyright:   © Copyright 2017 Colby L Williams
+copyright: © Copyright 2021 Colby L Williams
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://colbylwilliams.github.io" # the base hostname & protocol for your site
-local_url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://colbylwilliams.github.io' # the base hostname & protocol for your site
+local_url: 'http://127.0.0.1:4000' # the base hostname & protocol for your site
 
 # Social Accounts
-twitter_username: colbylwilliams
-github_username:  colbylwilliams
+# twitter_username: colbylwilliams
+github_username: colbylwilliams
 
 # Build settings
 markdown: kramdown
@@ -23,3 +23,5 @@ theme: minima
 
 # Google services
 google_analytics: UA-84800448-1
+
+github: [metadata]
