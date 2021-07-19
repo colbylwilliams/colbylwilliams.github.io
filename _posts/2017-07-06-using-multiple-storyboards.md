@@ -2,7 +2,7 @@
 layout:	post
 title:	"Using Multiple Storyboards in Xcode IB and Xamarin"
 tags:	xamarin xamarin-studio xcode
-excerpt: This video shows how you can use multiple <code>.storyboards</code> in your Xamarin.iOS (or just iOS) app, and create segues in Interface Builder directly to another <code>.storyboard</code> just like you would to a <code>UIViewController</code>`.
+excerpt: This video shows how you can use multiple <code>.storyboards</code> in your Xamarin.iOS (or just iOS) app, and create segues in Interface Builder directly to another <code>.storyboard</code> just like you would to a <code>UIViewController</code>.
 ---
 
 I notice a lot of iOS developers who still stick to the "one storyboard per app" rule.  Or worse, they avoid using `.storyboards` all-together from fear of merge conflict hell (gross).
